@@ -1,0 +1,27 @@
+---
+title: "Project 4"
+output: html_notebook
+---
+
+```{r}
+p <- seq(0,1,0.01)
+# P(p) ~ Beta(1,1)
+#Shape1 = alpha, Shape2 = beta
+plot(p, dbeta(p, shape1 = 1, shape2 = 1), type = "l")
+plot(p, dbeta(p, shape1 = 15, shape2 = 15), type = "l")
+plot(p, dbeta(p, shape1 = 0.1, shape2 = 0.1), type = "l")
+plot(p, dbeta(p, shape1 = 1, shape2 = 9), type = "l")
+plot(p, dbeta(p, shape1 = 100, shape2 = 900), type = "l")
+```
+
+```{r}
+# High Variation
+plot(p, dbeta(p, shape1 = 0.5 * 2, shape2 = 0.5 * 2), type = "l")
+# Low Variance
+plot(p, dbeta(p, shape1 = 0.5 * 100, shape2 = 0.5 * 100), type = "l")
+```
+
+Quantifying differentiation - F-model to quantify diff
+
+Fst is generally a measure of variance in allele frequencies
+Fixed effects versus random effects
